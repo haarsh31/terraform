@@ -1,0 +1,15 @@
+# STEPS to Create Vault Deployment and running Vault UI locally 
+
+1. kubectl create namespace vault
+
+2. ./helm.exe repo add hashicorp https://helm.releases.hashicorp.com
+
+3. ./helm.exe search repo hashicorp/vault
+
+4.  ./helm.exe install vault hashicorp/vault --namespace vault --version 0.15.0
+
+5. Check all the vault components are running (kubectl get all -n vault)
+
+6. kubectl -n vault port-forward svc/vault 8200   # With this command you can access vault on the local desktop
+
+7. Open any browser and open - localhost:8200

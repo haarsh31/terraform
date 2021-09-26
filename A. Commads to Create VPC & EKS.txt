@@ -1,0 +1,11 @@
+# Command to create VPC & EKS cluster through terraform : 
+
+1. .\terraform.exe init # This will download all the dependency required by terraform
+
+2. .\terraform.exe plan # This will show what resources will be created by terraform over AWS
+
+3. .\terraform.exe apply  # This will create all the resources over AWS
+
+4.  aws eks --region us-east-1 update-kubeconfig -name my_eks_cluster_aquasec --profile admin  # This will set .kubeconfig configuration. 
+
+5. kubectl get all -A # this will show all the resources present under EKS clusters. 
